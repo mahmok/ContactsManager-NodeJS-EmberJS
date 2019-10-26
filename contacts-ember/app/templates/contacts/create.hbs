@@ -1,0 +1,6 @@
+<BsForm @formLayout="vertical" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+    <form.element @controlType="text" @label="Name" @placeholder="Name" @property="name" @required={{true}} />
+    <form.element @controlType="text" @label="Mobile" @placeholder="Mobile" @property="mobile" @required={{true}} />
+    <form.element @controlType="email" @label="Email" @placeholder="Email" @property="email" @required={{true}} />
+    <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+</BsForm>

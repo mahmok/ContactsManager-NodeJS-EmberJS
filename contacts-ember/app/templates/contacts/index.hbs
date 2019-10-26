@@ -1,0 +1,26 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this.model as |contact|}}
+        <tr>
+            <th scope="row">{{contact.id}}</th>
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.mobile}}</td>
+            <td>
+                <button {{action "show" contact.id}} class="btn btn-primary">Show</button>
+                <button {{action "delete" contact.id}} class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
